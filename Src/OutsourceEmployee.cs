@@ -27,7 +27,7 @@ namespace EmployeesPayment.Src
 
         public override string ToString()
         {
-            return $"(AdditionCharge: {AdditionCharge},{base.ToString()})";
+            return $"OutsourceEmployee (AdditionCharge: {AdditionCharge},{base.ToString()}) ";
         }
 
         /// <summary>

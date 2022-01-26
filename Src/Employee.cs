@@ -38,7 +38,7 @@ namespace EmployeesPayment.Src
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Employee(name{_name}, hours: {_hours}, valuePerHour: {_valuePerHour})";
+            return $"Employee(name: {_name}, hours: {_hours}, valuePerHour: {_valuePerHour}) ";
         }
 
 
