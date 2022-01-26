@@ -9,29 +9,36 @@ namespace EmployeesPayment.Src
     class OutsourceEmployee : Employee
     {
         /// <summary>
+        /// additional expenses
+        /// </summary>
+        public double AdditionCharge { get; set; }
+
+
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="valuePerHour"></param>
         /// <param name="hours"></param>
         /// <param name="name"></param>
-        public OutsourceEmployee(double valuePerHour, int hours, string name) : base(valuePerHour, hours, name)
+        public OutsourceEmployee(string name,double valuePerHour, int hours, double additionCharge) : base(name,valuePerHour, hours )
         {
+           AdditionCharge = additionCharge;
         }
+
+        public override string ToString()
+        {
+            return $"(AdditionCharge: {AdditionCharge},{base.ToString()})";
+        }
+
         /// <summary>
         /// 
+        /// payment of the common employee plus 110% of additional expenses
         /// </summary>
         /// <returns></returns>
-        private double additionalCharge()
+        public override double Payment()
         {
-            return 0.0;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        private double Payment()
-        {
-            return 0.0;
+           // base.Payment();
+            return base.Payment() + (1.1  * AdditionCharge);
         }
     }
 }

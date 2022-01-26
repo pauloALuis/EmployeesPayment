@@ -40,5 +40,15 @@ namespace EmployeesPayment.Src
         {
             return $"Employee(name{_name}, hours: {_hours}, valuePerHour: {_valuePerHour})";
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public virtual double Payment()
+        {
+            return _valuePerHour * _hours;
+        }
     }
 }
