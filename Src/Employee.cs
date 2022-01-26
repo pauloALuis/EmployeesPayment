@@ -22,7 +22,7 @@ namespace EmployeesPayment.Src
         /// <param name="valuePerHour"></param>
         /// <param name="hours"></param>
         /// <param name="name"></param>
-        public Employee(double valuePerHour, int hours, string name)
+        public Employee(string name="Name One", double valuePerHour = 1.3, int hours = 8)
         {
             _valuePerHour = valuePerHour;
             _hours = hours;
@@ -38,7 +38,7 @@ namespace EmployeesPayment.Src
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Employee(name{_name}, hours: {_hours},valuePerHour: {_valuePerHour})";
+            return $"Employee(name{_name}, hours: {_hours}, valuePerHour: {_valuePerHour})";
         }
     }
 }
